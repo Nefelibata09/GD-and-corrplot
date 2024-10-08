@@ -1,0 +1,6 @@
+jupyter
+python=3.10
+r-gd=1.10
+r-codetools
+r-raster
+r-rgdal

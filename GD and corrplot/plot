@@ -1,0 +1,45 @@
+COLOR01<- colorRampPalette(c("#5081ff","#638dff","#b1c6ff","#c3d5ff" ,"#ffffff", "#f7cccc","#f1aeac","#eb8b8a","#e66a68"))(10)
+corrplot(data5,method="color",mar=c(0, 0, 2, 0) ,main="(e)2020",type="lower",order="FPC",tl.offset=1,
+addCoef.col="black",tl.col="black",tl.srt=0,
+cl.pos="b",is.corr =FALSE,tl.cex = 2.5)
+par(family = "Times New Roman")
+tiff("2000.tiff", width = 5000, height = 5000, res = 500)
+
+
+ data5 <- read.table("C:/Users/kilin/Desktop/长三角/2020.txt",header = T,row.names=1)
+ data5<-as.matrix(data5)
+
+
+
+
+ tiff("ALL.tiff",width = 15000, height = 10000, res = 500)
+ par(mfrow = c(2, 3),       
+    mar = c(0, 0, 0, 0),    
+    oma = c(0, 0, 0, 0))
+ data1 <- read.table("C:/Users/kilin/Desktop/长三角/2000.txt",header = T,row.names=1)
+ data2 <- read.table("C:/Users/kilin/Desktop/长三角/2005.txt",header = T,row.names=1)
+  data3 <- read.table("C:/Users/kilin/Desktop/长三角/2010.txt",header = T,row.names=1)
+ data4 <- read.table("C:/Users/kilin/Desktop/长三角/2015.txt",header = T,row.names=1)
+ data5 <- read.table("C:/Users/kilin/Desktop/长三角/2020.txt",header = T,row.names=1)
+ data1<-as.matrix(data1)
+  data2<-as.matrix(data2)
+ data3<-as.matrix(data3)
+  data4<-as.matrix(data4)
+ data5<-as.matrix(data5)
+ par(family = "Times New Roman")
+ COLOR01<- colorRampPalette(c("#2E86C1", "#5DADE2", "#AED6F1", "#F7F9F9", "#F5B7B1", "#E74C3C", "#C0392B"))(200)
+ corrplot(data1,method="color",mar=c(0, 0, 2, 0) ,main="(a)2000",type="lower",order="FPC",tl.offset=1,
+ addCoef.col="black",tl.col="black",tl.srt=0,cex.main = 3, number.cex = 3,cl.length =11,col.lim=c(0,1),
+ cl.pos="b",is.corr =FALSE,tl.cex = 2.5,cl.cex = 2.3,col=COLOR01)
+ corrplot(data2,method="color",mar=c(0, 0, 2, 0) ,main="(b)2005",type="lower",order="FPC",tl.offset=1,
+ addCoef.col="black",tl.col="black",tl.srt=0,cex.main = 3, number.cex = 3,cl.length =11,col.lim=c(0,1),
+ cl.pos="b",is.corr =FALSE,tl.cex = 2.5,cl.cex = 2.3,col=COLOR01)
+ corrplot(data3,method="color",mar=c(0, 0, 2, 0) ,main="(c)2010",type="lower",order="FPC",tl.offset=1,
+ addCoef.col="black",tl.col="black",tl.srt=0,cex.main = 3,number.cex = 3,cl.length =11,col.lim=c(0,1),
+ cl.pos="b",is.corr =FALSE,tl.cex = 2.5,cl.cex = 2.3,col=COLOR01)
+ corrplot(data4,method="color",mar=c(0, 0, 2, 0) ,main="(d)2015",type="lower",order="FPC",tl.offset=1,
+ addCoef.col="black",tl.col="black",tl.srt=0,cex.main = 3, number.cex = 3,cl.length =11,col.lim=c(0,1),
+ cl.pos="b",is.corr =FALSE,tl.cex = 2.5,cl.cex = 2.3,col=COLOR01)
+ corrplot(data5,method="color",mar=c(0, 0, 2, 0) ,main="(e)2020",type="lower",order="FPC",tl.offset=1,
+ addCoef.col="black",tl.col="black",tl.srt=0,cex.main = 3, number.cex = 3,cl.length =11,col.lim=c(0,1),
+ cl.pos="b",is.corr =FALSE,tl.cex = 2.5,cl.cex = 2.3,col=COLOR01)
